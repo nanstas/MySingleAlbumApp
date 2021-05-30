@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemContainerView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:orientation="horizontal">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/playPauseButtonView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        tools:icon="@drawable/ic_play_24"
+        app:iconPadding="0dp"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/trackNameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playPauseButtonView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="name_track.mp3" />
+
+    <TextView
+        android:id="@+id/trackDurationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="00:00" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
